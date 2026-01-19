@@ -37,6 +37,18 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     transition: 0.3s, transform 0.2s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -44,6 +56,9 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+nav ul li a:hover::after {
+    width: 100%;
+}
 body.light nav ul li a {
     color: #020617;
 }
@@ -56,6 +71,28 @@ body.light nav ul li a:hover {
 .left {
     font-size: 1.4rem;
     font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.left::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.left:hover {
+    color: #38bdf8;
+}
+
+.left:hover::after {
+    width: 100%;
 }
 
 .theme-buttons {
@@ -161,9 +198,16 @@ section h1 {
     color: inherit;
     margin: 50px 0 30px;
     margin-top: -50px;
-    background-color: aqua;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #38bdf8, #60a5fa);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.5);
+    transition: 0.4s;
+    border-radius: 99px;
     margin-bottom: 85px;
+}
+
+section h1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(56, 189, 248, 0.7);
 }
 
 
@@ -185,16 +229,17 @@ section h1 {
     text-align: center;
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: 0.3s, transform 0.2s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
     text-decoration: none;
     color: white;
 }
 
 .skillBox:hover,
 .projectCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8, 0 0 60px #38bdf8;
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px #38bdf8, 0 0 40px #38bdf8, 0 0 60px #38bdf8;
     border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.15);
 }
 
 body.light .contactSection input,
@@ -386,11 +431,11 @@ body.light .vertical {
 
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s ease
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
 }

@@ -5,12 +5,23 @@ new Typed('#element', {
 });
 
 const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 150;
+
     reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) { el.classList.add("active") }
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active"); // optional: remove if you want repeat
+        }
     });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
 document.getElementById('darkBtn').onclick = () => document.body.classList.remove("light");
 document.getElementById('lightBtn').onclick = () => document.body.classList.add("light");
