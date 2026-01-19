@@ -15,7 +15,7 @@ function revealOnScroll() {
         if (elementTop < windowHeight - revealPoint) {
             el.classList.add("active");
         } else {
-            el.classList.remove("active"); // optional: remove if you want repeat
+            el.classList.remove("active");
         }
     });
 }
