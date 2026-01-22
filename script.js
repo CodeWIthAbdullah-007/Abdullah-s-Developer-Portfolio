@@ -1,3 +1,16 @@
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});
+
 new Typed('#element', {
     strings: ['Web Developer', 'Web Designer', 'UI / UX Designer', 'Video Editor'],
     typeSpeed: 60,
@@ -7,15 +20,9 @@ new Typed('#element', {
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 150;
-
     reveals.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - revealPoint) {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
             el.classList.add("active");
-        } else {
-            el.classList.remove("active");
         }
     });
 }
