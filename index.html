@@ -4,29 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abdullah Anwar - Web Developer Portfolio">
   <title>Abdullah Anwar | Web Developer</title>
+
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
   <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('ZdJKUgS5zBMWMinIF');</script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <div id="progress-bar"></div>
 
   <div class="bg-wrap">
     <div class="bg-grid"></div>
     <div class="bg-blob blob-1"></div>
     <div class="bg-blob blob-2"></div>
-    <div class="bg-blob blob-3"></div>
   </div>
 
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <button id="back-to-top" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
+  <div id="back-to-top"><i class='bx bx-chevron-up'></i></div>
 
   <div class="toast" id="toast"></div>
 
@@ -45,10 +51,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <div class="nav-right">
+      <div style="display: flex; align-items: center;">
         <div class="theme-toggle">
-          <button class="theme-btn active" id="btnDark" onclick="setTheme('dark')" data-tooltip="Dark">🌙</button>
-          <button class="theme-btn" id="btnLight" onclick="setTheme('light')" data-tooltip="Light">☀️</button>
+          <button class="theme-btn active" id="btnDark" onclick="setTheme('dark')"><i class='bx bx-moon'></i></button>
+          <button class="theme-btn" id="btnLight" onclick="setTheme('light')"><i class='bx bx-sun'></i></button>
         </div>
         <div class="hamburger" id="hamburger">
           <span class="bar"></span>
@@ -59,268 +65,241 @@
     </nav>
   </header>
 
-  <section id="home">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:40px;width:100%">
-      <div class="hero-left">
-        <div class="hero-tag">Available for Work</div>
-        <h1 class="hero-name">I'm <span class="name-hl">Abdullah</span><br>Anwar</h1>
-        <p class="hero-sub">and I'm a <span id="element"></span></p>
-        <p class="hero-desc">
-          Passionate about crafting modern, interactive, and user-friendly digital experiences. I turn ideas into
-          elegant, high-performance code.
-        </p>
-        <div class="btn-group">
-          <a href="#contact" class="btn btn-primary">Hire Me <i class='bx bx-send'></i></a>
-          <a href="images/Abdullah_Anwar_CV_For_Jobs.pdf" class="btn btn-outline" target="_blank">Download CV <i
-              class='bx bxs-download'></i></a>
+  <main>
+    <section id="home">
+      <div class="container hero-content">
+        <div class="hero-left reveal active">
+          <div class="hero-tag">Available for Work</div>
+          <h1 class="hero-name">I'm <span class="name-hl">Abdullah</span><br>Anwar</h1>
+          <p class="hero-sub">and I'm a <span id="element"></span></p>
+          <p class="hero-desc">
+            Passionate about crafting modern, interactive, and user-friendly digital experiences. I turn ideas into
+            elegant, high-performance code.
+          </p>
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">Hire Me <i class='bx bx-send'></i></a>
+            <a href="images/Abdullah_Anwar_CV_For_Jobs.pdf" class="btn btn-outline" target="_blank">Download CV <i
+                class='bx bxs-download'></i></a>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/CodeWithAbdullah-007" target="_blank" class="social-btn"><i
+                class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/m-abdullah-anwar-8651403a2/" target="_blank" class="social-btn"><i
+                class='bx bxl-linkedin-square'></i></a>
+            <a href="mailto:mabdullahanwar85@gmail.com" class="social-btn"><i class='bx bx-envelope'></i></a>
+          </div>
         </div>
-        <div class="social-row">
-          <a href="https://github.com/CodeWithAbdullah-007" target="_blank" class="social-btn" data-tooltip="GitHub"><i
-              class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/m-abdullah-anwar-8651403a2/" target="_blank" class="social-btn"
-            data-tooltip="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
-          <a href="mailto:mabdullahanwar85@gmail.com" class="social-btn" data-tooltip="Email"><i
-              class='bx bx-envelope'></i></a>
-        </div>
-      </div>
 
-      <div class="hero-right">
-        <div class="profile-ring ring-1"></div>
-        <div class="profile-ring ring-2"></div>
-        <div class="profile-ring ring-3"></div>
-        <img src="images/ProfilePicture.png.jfif" alt="Abdullah Anwar" class="profile-img"
-          onerror="this.src='https://ui-avatars.com/api/?name=Abdullah+Anwar&size=360&background=030c0a&color=22c55e&bold=true'" />
-        <div class="hero-badge badge-1">
-          <span class="badge-icon">⚛️</span>
-          <span>React Developer</span>
-        </div>
-        <div class="hero-badge badge-2">
-          <span class="badge-icon">🎨</span>
-          <span>UI/UX Designer</span>
+        <div class="hero-right reveal active">
+          <div class="profile-ring ring-1"></div>
+          <div class="profile-ring ring-2"></div>
+          <img src="images/ProfilePicture.png.jfif" alt="Abdullah Anwar" class="profile-img"
+            onerror="this.src='https://ui-avatars.com/api/?name=Abdullah+Anwar&size=360&background=22c55e&color=fff&bold=true'" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="glass-card">
-        <p>
-          Hello! 👋 I am <strong>Abdullah</strong>, a passionate <span class="ac">Web Developer</span> and <span
-            class="ac">UI/UX Designer</span> dedicated to crafting modern, interactive, and user-friendly
-          websites.<br><br>
-          I specialize in <strong>HTML, CSS, JavaScript</strong>, and modern frameworks like <strong>React.js</strong>.
-          I also have experience with <strong>Node.js</strong> for backend development. Beyond coding, I enjoy designing
-          intuitive interfaces with <strong>Figma</strong>.
-        </p>
-        <div class="about-stats">
-          <div class="glass-card stat-card">
-            <span class="stat-n" data-count="15">0</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="glass-card stat-card">
-            <span class="stat-n" data-count="2">0</span>
-            <span class="stat-label">Years Exp</span>
-          </div>
-          <div class="glass-card stat-card">
-            <span class="stat-n">24/7</span>
-            <span class="stat-label">Support</span>
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="glass-card">
+          <p>
+            Hello! 👋 I am <strong>Abdullah</strong>, a passionate <span style="color:var(--accent)">Web
+              Developer</span> and <span style="color:var(--accent)">UI/UX Designer</span> dedicated to crafting modern,
+            interactive, and user-friendly
+            websites.<br><br>
+            I specialize in <strong>HTML, CSS, JavaScript</strong>, and modern frameworks like
+            <strong>React.js</strong>.
+            I also have experience with <strong>Node.js</strong> for backend development. Beyond coding, I enjoy
+            designing
+            intuitive interfaces with <strong>Figma</strong>.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-n" data-count="15">0</span>
+              <span class="stat-label">Projects Done</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-n" data-count="2">0</span>
+              <span class="stat-label">Years Exp</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-n">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">My Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-chip"><span>🌐 HTML5</span></div>
-        <div class="skill-chip"><span>🎨 CSS3</span></div>
-        <div class="skill-chip"><span>⚡ JavaScript</span></div>
-        <div class="skill-chip"><span>⚛️ React.js</span></div>
-        <div class="skill-chip"><span>🚀 Node.js</span></div>
-        <div class="skill-chip"><span>📱 Responsive</span></div>
-        <div class="skill-chip"><span>🖌️ Figma</span></div>
-        <div class="skill-chip"><span>🔧 Git & GitHub</span></div>
-        <div class="skill-chip"><span>🐙 Bootstrap</span></div>
-        <div class="skill-chip"><span>🎬 Video Editing</span></div>
-      </div>
+    <section id="skills" class="reveal">
+      <div class="container">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-grid">
+          <div class="skill-chip"><i class='bx bxl-html5'></i> HTML5</div>
+          <div class="skill-chip"><i class='bx bxl-css3'></i> CSS3</div>
+          <div class="skill-chip"><i class='bx bxl-javascript'></i> JavaScript</div>
+          <div class="skill-chip"><i class='bx bxl-react'></i> React.js</div>
+          <div class="skill-chip"><i class='bx bxl-nodejs'></i> Node.js</div>
+          <div class="skill-chip"><i class='bx bx-mobile-alt'></i> Responsive</div>
+          <div class="skill-chip"><i class='bx bxl-figma'></i> Figma</div>
+          <div class="skill-chip"><i class='bx bxl-git'></i> Git</div>
+        </div>
 
-      <div class="skills-bars">
-        <div class="skill-bar-item">
-          <div class="skill-bar-header"><span>HTML / CSS</span><span class="ac">100%</span></div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="100"></div>
+        <div class="skills-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-info">
+              <span>HTML / CSS</span><span>100%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="100"></div>
+            </div>
           </div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-header"><span>JavaScript</span><span class="ac">100%</span></div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="100"></div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-info">
+              <span>JavaScript</span><span>100%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="100"></div>
+            </div>
           </div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-header"><span>React.js</span><span class="ac">30%</span></div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="30"></div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-info">
+              <span>React.js</span><span>30%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="30"></div>
+            </div>
           </div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-header"><span>Node.js</span><span class="ac">25%</span></div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="25"></div>
-          </div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-header"><span>Figma / UI Design</span><span class="ac">89%</span></div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="89"></div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-info">
+              <span>Node.js</span><span>25%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="25"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-        <a href="https://codewithabdullah-007.github.io/HTML_-_CSS_-_JAVASCRIPT_DICE_ROLL_GAME/" target="_blank"
-          class="proj-card">
-          <img src="images/dice-roll.PNG" alt="Dice Game" onerror="this.src='https://picsum.photos/seed/dice/400/300'">
-          <span class="proj-tag">JS Game</span>
-          <div class="proj-overlay">
-            <h3>🎲 Dice Game</h3>
-            <p>Interactive JS Game</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_-18-_TODO_LIST_CREATE/" target="_blank"
-          class="proj-card">
-          <img src="images/Todo-App.PNG" alt="Todo App" onerror="this.src='https://picsum.photos/seed/todo/400/300'">
-          <span class="proj-tag">Productivity</span>
-          <div class="proj-overlay">
-            <h3>📝 Todo App</h3>
-            <p>Task Manager</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_STOP_WATCH_SMIT_BATCH_-18-/" target="_blank"
-          class="proj-card">
-          <img src="images/Stop-Watch.PNG" alt="Stopwatch"
-            onerror="this.src='https://picsum.photos/seed/watch/400/300'">
-          <span class="proj-tag">Utility</span>
-          <div class="proj-overlay">
-            <h3>⏱️ Stopwatch</h3>
-            <p>Time Tracking Tool</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/Assignment_31/" target="_blank" class="proj-card">
-          <img src="images/Rebetro_Website.PNG" alt="Hotel Website"
-            onerror="this.src='https://picsum.photos/seed/hotel/400/300'">
-          <span class="proj-tag">Web Design</span>
-          <div class="proj-overlay">
-            <h3>🏨 Hotel Web</h3>
-            <p>Responsive Design</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_BATCH_18_ASSIGNMENT_9_FIGMA_CLONE/"
-          target="_blank" class="proj-card">
-          <img src="images/Figma-Clone.PNG" alt="Figma Clone"
-            onerror="this.src='https://picsum.photos/seed/figma/400/300'">
-          <span class="proj-tag">UI Clone</span>
-          <div class="proj-overlay">
-            <h3>🎨 Figma Clone</h3>
-            <p>Pixel Perfect Design</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_BATCH_18_ASSIGNMENT_9_STUDENT_MANAGMENT_SYSTEM/"
-          target="_blank" class="proj-card">
-          <img src="images/Student-Portal.PNG" alt="Student Management System"
-            onerror="this.src='https://picsum.photos/seed/student/400/300'">
-          <span class="proj-tag">JavaScript App</span>
-          <div class="proj-overlay">
-            <h3>📚 Student System</h3>
-            <p>CRUD Functionality</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_BATCH_18_ASSIGNMENTS_6_LOGIN_SIGNUP/"
-          target="_blank" class="proj-card">
-          <img src="images/Login-SignUp.PNG" alt="Login Signup System"
-            onerror="this.src='https://picsum.photos/seed/login/400/300'">
-          <span class="proj-tag">Authentication</span>
-          <div class="proj-overlay">
-            <h3>🔐 Login System</h3>
-            <p>User Authentication</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_-18-_TODO_LIST_CREATE/" target="_blank"
-          class="proj-card">
-          <img src="images/Todo-App.PNG" alt="Todo List App"
-            onerror="this.src='https://picsum.photos/seed/todo/400/300'">
-          <span class="proj-tag">JavaScript App</span>
-          <div class="proj-overlay">
-            <h3>📝 Todo App</h3>
-            <p>Task Management</p>
-          </div>
-        </a>
-        <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_-18-_CALCULATOR/" target="_blank"
-          class="proj-card">
-          <img src="images/Calculator.PNG" alt="Calculator App"
-            onerror="this.src='https://picsum.photos/seed/calculator/400/300'">
-          <span class="proj-tag">Utility Tool</span>
-          <div class="proj-overlay">
-            <h3>🧮 Calculator</h3>
-            <p>Basic Calculations</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="glass-card contact-container">
-        <div class="contact-left">
-          <h3>Contact Info</h3>
-          <p>Feel free to reach out for projects or collaborations.</p>
-          <div class="contact-info-item">
-            <i class='bx bx-envelope'></i>
-            <div><strong>Email</strong>mabdullahanwar85@gmail.com</div>
-          </div>
-          <div class="contact-info-item">
-            <i class='bx bx-phone'></i>
-            <div><strong>Phone</strong>0346319785</div>
-          </div>
-          <div class="contact-info-item">
-            <i class='bx bx-map'></i>
-            <div><strong>Location</strong>Remote / Pakistan</div>
-          </div>
+    <section id="projects" class="reveal">
+      <div class="container">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-grid">
+          <a href="https://codewithabdullah-007.github.io/HTML_-_CSS_-_JAVASCRIPT_DICE_ROLL_GAME/" target="_blank"
+            class="proj-card">
+            <img src="images/dice-roll.PNG" alt="Dice Game"
+              onerror="this.src='https://picsum.photos/seed/dice/400/300'">
+            <div class="proj-overlay">
+              <h3>Dice Game</h3>
+              <p>Interactive JS Game</p>
+            </div>
+          </a>
+          <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_-18-_TODO_LIST_CREATE/" target="_blank"
+            class="proj-card">
+            <img src="images/Todo-App.PNG" alt="Todo App" onerror="this.src='https://picsum.photos/seed/todo/400/300'">
+            <div class="proj-overlay">
+              <h3>Todo App</h3>
+              <p>Task Manager</p>
+            </div>
+          </a>
+          <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_STOP_WATCH_SMIT_BATCH_-18-/" target="_blank"
+            class="proj-card">
+            <img src="images/Stop-Watch.PNG" alt="Stopwatch"
+              onerror="this.src='https://picsum.photos/seed/watch/400/300'">
+            <div class="proj-overlay">
+              <h3>Stopwatch</h3>
+              <p>Time Tracking Tool</p>
+            </div>
+          </a>
+          <a href="https://codewithabdullah-007.github.io/Assignment_31/" target="_blank" class="proj-card">
+            <img src="images/Rebetro_Website.PNG" alt="Hotel Website"
+              onerror="this.src='https://picsum.photos/seed/hotel/400/300'">
+            <div class="proj-overlay">
+              <h3>Hotel Web</h3>
+              <p>Responsive Design</p>
+            </div>
+          </a>
+          <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_SMIT_BATCH_18_ASSIGNMENT_9_FIGMA_CLONE/"
+            target="_blank" class="proj-card">
+            <img src="images/Figma-Clone.PNG" alt="Figma Clone"
+              onerror="this.src='https://picsum.photos/seed/figma/400/300'">
+            <div class="proj-overlay">
+              <h3>Figma Clone</h3>
+              <p>Pixel Perfect Design</p>
+            </div>
+          </a>
+          <a href="https://codewithabdullah-007.github.io/JAVASCRIPT_BATCH_18_ASSIGNMENT_9_STUDENT_MANAGMENT_SYSTEM/"
+            target="_blank" class="proj-card">
+            <img src="images/Student-Portal.PNG" alt="Student Management System"
+              onerror="this.src='https://picsum.photos/seed/student/400/300'">
+            <div class="proj-overlay">
+              <h3>Student System</h3>
+              <p>CRUD Functionality</p>
+            </div>
+          </a>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="input-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Your Name" required />
-          </div>
-          <div class="input-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" placeholder="hello@example.com" required />
-          </div>
-          <div class="input-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="justify-content:center;width:100%">
-            Send Message <i class='bx bx-send'></i>
-          </button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px; font-family: var(--font-head);">Contact Info</h3>
+            <p style="color: var(--text-sub); margin-bottom: 25px;">Feel free to reach out for projects or
+              collaborations.</p>
+
+            <div class="contact-info-item">
+              <i class='bx bx-envelope'></i>
+              <div>
+                <strong>Email</strong>
+                <div style="font-size: 0.9rem; color: var(--text-sub);">mabdullahanwar85@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class='bx bx-phone'></i>
+              <div>
+                <strong>Phone</strong>
+                <div style="font-size: 0.9rem; color: var(--text-sub);">0346319785</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class='bx bx-map'></i>
+              <div>
+                <strong>Location</strong>
+                <div style="font-size: 0.9rem; color: var(--text-sub);">Remote / Pakistan</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm">
+            <div class="input-group">
+              <label>Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required />
+            </div>
+            <div class="input-group">
+              <label>Your Email</label>
+              <input type="email" id="email" class="form-control" placeholder="hello@example.com" required />
+            </div>
+            <div class="input-group">
+              <label>Message</label>
+              <textarea id="message" class="form-control" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+              Send Message <i class='bx bx-send'></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>Crafted with ❤️ by <span class="ac">Abdullah Anwar</span> &copy; 2025</p>
+    <p>Crafted with ❤️ by <span style="color:var(--accent)">Abdullah Anwar</span> &copy; 2025</p>
   </footer>
 
   <script src="script.js"></script>
